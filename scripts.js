@@ -19,14 +19,15 @@ function displaybook(){
   const container=document.getElementById("bookcontainer");
   container.innerHTML="";
 
-  books.forEach((book) =>{
+  books.forEach((book, i) =>{
 
     const card=document.createElement("div");
     card.classList.add("bookcard");
     card.innerHTML=`
-      <p>Title: ${book.title}</p>
-      <p>Author: ${book.author}</p>
-      <p>Pages: ${book.pages}</p>
+      <h4 style="justify-self: center;">Book ${i+1}</h4>
+      <p style="justify-self: center;">Title: ${book.title}</p>
+      <p style="justify-self: center;">Author: ${book.author}</p>
+      <p style="justify-self: center;">Pages: ${book.pages}</p>
     `
     container.appendChild(card);
   })
